@@ -33,3 +33,5 @@
     document.addEventListener('keydown',e=>{if(!lightbox.classList.contains('is-open'))return;if(e.key==='ArrowRight')show(index+1);if(e.key==='ArrowLeft')show(index-1);if(e.key==='Escape')close();});
   }
 })();
+
+>>>>>>> 1d33861520b9c76712b49a16be6ab5d0be16c6c1
