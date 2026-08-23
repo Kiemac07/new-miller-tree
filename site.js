@@ -34,4 +34,37 @@
   }
 })();
 
->>>>>>> 1d33861520b9c76712b49a16be6ab5d0be16c6c1
+
+// WhatsApp quote form
+const quoteForm = document.querySelector('.quote-form');
+if (quoteForm) {
+  quoteForm.addEventListener('submit', function (event) {
+    event.preventDefault();
+    if (!quoteForm.reportValidity()) return;
+
+    const name = document.getElementById('quote-name')?.value.trim() || '';
+    const phone = document.getElementById('quote-phone')?.value.trim() || '';
+    const email = document.getElementById('quote-email')?.value.trim() || '';
+    const service = document.getElementById('quote-service')?.value || '';
+    const location = document.getElementById('quote-location')?.value.trim() || '';
+    const details = document.getElementById('quote-details')?.value.trim() || '';
+
+    const message = [
+      'Miller Tree & Ground Services — Quote Request',
+      '',
+      `Name: ${name}`,
+      `Phone: ${phone}`,
+      email ? `Email: ${email}` : '',
+      `Service: ${service}`,
+      `Job location / postcode: ${location}`,
+      '',
+      'Job details:',
+      details,
+      '',
+      'I will attach photos of the job in WhatsApp.'
+    ].filter(Boolean).join('\n');
+
+    const whatsappNumber = '447345034608';
+    window.location.href = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+  });
+}
