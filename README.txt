@@ -1,14 +1,5 @@
-MILLER TREE & GROUND SERVICES — WEBSITE PACK
+Miller Tree & Ground Services website v2.
 
-Drop the contents of this ZIP into the root of the VS Code website repository.
-
-Pages included:
-- index.html
-- services.html
-- our-work.html
-- about.html
-- who-we-work-with.html
-- quote.html
-
-All work photographs in the gallery are genuine supplied photographs.
-NO AI-GENERATED JOB PHOTOS ARE USED.
+Static multi-page site. Drag all files into your VS Code repo.
+Real project photos are used; no AI project imagery.
+Desktop: quote form is replaced by QR code. Mobile: quote form is shown.
